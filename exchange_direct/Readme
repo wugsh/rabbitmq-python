@@ -1,0 +1,8 @@
+模式：direct
+
+这种工作模式的原理是 消息发送至 exchange，exchange 根据 路由键（routing_key）转发到相对应的 queue 上。
+
+ 可以使用默认 exchange =' ' ，也可以自定义 exchange
+这种模式下不需要将 exchange 和 任何进行绑定，当然绑定也是可以的。可以将 exchange 和 queue ，routing_key 和 queue 进行绑定
+传递或接受消息时 需要 指定 routing_key
+需要先启动 订阅者，此模式下的队列是 consumer 随机生成的，发布者 仅仅发布消息到 exchange ，由 exchange 转发消息至 queue。
