@@ -1,6 +1,6 @@
 import pika
 
-credentials = pika.PlainCredentials('TestUser', 'gavin1234')
+credentials = pika.PlainCredentials('TestUser', '1234')
 connection = pika.BlockingConnection(pika.ConnectionParameters(host = '127.0.0.1',port = 5672,virtual_host = '/',credentials = credentials))
 channel = connection.channel()
 # 申明消息队列，消息在这个队列传递，如果不存在，则创建队列
