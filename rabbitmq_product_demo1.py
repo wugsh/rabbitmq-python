@@ -1,7 +1,7 @@
 import pika
 import json
 
-credentials = pika.PlainCredentials('TestUser', 'gavin1234')  # mq用户名和密码
+credentials = pika.PlainCredentials('TestUser', '1234')  # mq用户名和密码
 # 虚拟队列需要指定参数 virtual_host，如果是默认的可以不填。
 connection = pika.BlockingConnection(pika.ConnectionParameters(host = '127.0.0.1',port = 5672,virtual_host = '/',credentials = credentials))
 channel=connection.channel()
